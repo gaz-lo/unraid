@@ -1,0 +1,81 @@
+## This file is a template remove the .template to use the file
+
+libraries:              # Library mappings must have a colon (:) placed after them
+  Movies:
+    metadata_path:
+      - file: config/Movies.yml
+      - pmm: basic
+      - pmm: studio
+      - pmm: genre
+      - pmm: actor
+  TV Shows:
+    metadata_path:
+      - file: config/TV.yml
+      - pmm: basic
+      - pmm: network
+settings:                  # Can be individually specified per library as well
+  cache: true
+  cache_expiration: 60
+  asset_directory: config/assets
+  asset_folders: true
+  assets_for_all: false
+  sync_mode: append
+  show_unmanaged: true
+  show_filtered: false
+  show_missing: true
+  save_missing: true
+  run_again_delay: 2
+  missing_only_released: false
+  create_asset_folders: false
+  collection_minimum: 1
+  delete_below_minimum: false
+  tvdb_language: default
+  show_missing_assets: true
+plex:                       # Can be individually specified per library as well
+  url: http://192.168.1.121:32400
+  token: n9u-WyqAWwM2J1N5Q1D6
+  timeout: 60
+  clean_bundles: false
+  empty_trash: false
+  optimize: false
+tmdb:
+  apikey: 776717562d03eb5274326812999a4c08
+  language: en
+radarr:                     # Can be individually specified per library as well
+  url: http://192.168.1.121:7878
+  token: b6ce56c3c32e497e9b7335840dd3b7d7
+  version: v3
+  add: false
+  root_folder_path: /media/Movies
+  monitor: true
+  availability: announced
+  quality_profile: HD - 720p/1080p
+  tag:
+  search: false
+  add_existing: false
+sonarr:                      # Can be individually specified per library as well
+  url: http://192.168.1.121:8989
+  token: 2ff90131cf054f16a3d4a1ca5a00b8dc
+  version: v3
+  add: false
+  root_folder_path: /media/TV Shows
+  monitor: all
+  quality_profile: Any
+  language_profile: English
+  series_type: standard
+  season_folder: true
+  tag:
+  search: false
+  cutoff_search: false
+  add_existing: false
+trakt:
+  client_id: f8b3f42280e6e0521aec6b499d3360c968c7e7bbcf18ff01a0fffc360bc23efb
+  client_secret: 5a394c559f53251e349779c89b663136d6bc20fb4afb18471b6c818ffb6a174f
+# Everything below this line is automatically generated
+  authorization:
+    access_token:
+    token_type:
+    expires_in:
+    refresh_token: 
+    scope: public
+    created_at:
